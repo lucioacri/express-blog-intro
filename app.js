@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 app.use(express.static("public"));
 
 app.get("/bacheca", (req, res) => {
-  const bacheca = [
+  const postsArray = [
     {
       title: "Ciambellone",
       content: "",
@@ -45,5 +45,5 @@ app.get("/bacheca", (req, res) => {
       tags: ["torta", "paesana"],
     },
   ];
-  res.json({ posts: bacheca });
+  res.json({ posts: postsArray });
 });
