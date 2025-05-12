@@ -18,31 +18,31 @@ app.get("/bacheca", (req, res) => {
       title: "Ciambellone",
       content: "",
       image: "/images/ciambellone.jpeg",
-      tags: ["", ""],
+      tags: ["ciambellone"],
     },
     {
       title: "Cracker barbabietola",
       content: "",
       image: "/images/cracker_barbabietola.jpeg",
-      tags: ["", ""],
+      tags: ["cracker", "barbabietola"],
     },
     {
       title: "Pane fritto dolce",
       content: "",
       image: "/images/pane_fritto_dolce.jpeg",
-      tags: ["", ""],
+      tags: ["pane", "frittura", "dolce"],
     },
     {
       title: "Pasta barbabietola",
       content: "",
       image: "/images/pasta_barbabietola.jpeg",
-      tags: ["", ""],
+      tags: ["pasta", "barbabietola"],
     },
     {
       title: "Torta paesana",
       content: "",
       image: "/images/torta_paesana.jpeg",
-      tags: ["", ""],
+      tags: ["torta", "paesana"],
     },
   ];
   res.json(bacheca);
