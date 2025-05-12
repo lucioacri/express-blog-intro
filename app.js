@@ -45,5 +45,5 @@ app.get("/bacheca", (req, res) => {
       tags: ["torta", "paesana"],
     },
   ];
-  res.json(bacheca);
+  res.json({ posts: bacheca });
 });
