@@ -21,19 +21,22 @@ router.get("/:id", (req, res) => {
 
 // CREATE
 router.post("/", (req, res) => {
-  res.send("Creazione del post");
+  res.send({ Description: "Creazione del post", Object: "" });
 });
 
 // UPDATE
 router.put("/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  res.send("Aggiornamento del post " + id);
+  res.send({ Description: "Aggiornamento del post " + id, Object: "" });
 });
 
 // DELETE
 router.delete("/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  res.send("Cancellazione del post " + id);
+  res.send({
+    Description: "Cancellazione del post " + id,
+    Object: posts.filter((post) => post.id !== id),
+  });
 });
 
 module.exports = router;
