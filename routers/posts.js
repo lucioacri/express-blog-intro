@@ -1,15 +1,22 @@
 const express = require("express");
 const router = express.Router();
+const { posts } = require("../data.js");
 
 // INDEX
 router.get("/", (req, res) => {
-  res.send("Lista dei post");
+  res.send({
+    Description: "Lista dei post",
+    Object: posts,
+  });
 });
 
 // SHOW
 router.get("/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  res.send("Visualizzaziuone del post " + id);
+  res.send({
+    Description: "Visualizzaziuone del post " + id,
+    Object: posts.find((post) => post.id === id),
+  });
 });
 
 // CREATE
