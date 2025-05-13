@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-const posts = require("./posts.js");
+const posts = require("./data.js");
 
 app.listen(port, () => {
   console.log("Server collgato alla port:" + port);
